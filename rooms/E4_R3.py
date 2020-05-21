@@ -2,10 +2,10 @@ import Room
 import Constants as c
 
 
-class E4_R1(Room.Room):
+class E4_R3(Room.Room):
 
     def __init__(self):
-        super().__init__('The suicide forest', 'https://www.time-alive.it/roma-the-suicide-forest/', 'E4_R1')
+        super().__init__('L\'illusionista', 'https://www.time-alive.it/roma-lillusionista/', 'E4_R3')
 
     def get_prices(self):
         return ''

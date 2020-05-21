@@ -2,10 +2,10 @@ import Room
 import Constants as c
 
 
-class E7_R1(Room.Room):
+class E7_R2(Room.Room):
 
     def __init__(self):
-        super().__init__('Rapina alla banca', 'https://www.tribescaperoom.it/avventure/rapina-alla-banca/', 'E7_R1')
+        super().__init__('Il mondo perduto', 'https://www.tribescaperoom.it/avventure/il-mondo-perduto/', 'E7_R2')
 
     def get_prices(self):
         p = ['2 GIOCATORI: 50€ (25€ a persona)',

@@ -2,10 +2,10 @@ import Room
 import Constants as c
 
 
-class E8_R1(Room.Room):
+class E8_R2(Room.Room):
 
     def __init__(self):
-        super().__init__('I misteri della terra di mezzo', 'http://www.escaperoomrealgame.it/room/i-misteri-della-terra-di-mezzo/', 'E8_R1')
+        super().__init__('Freddy è tornato!', 'http://www.escaperoomrealgame.it/room/freddy/', 'E8_R2')
 
     def get_prices(self):
         p = ['2 giocatori : €25,00 a persona',

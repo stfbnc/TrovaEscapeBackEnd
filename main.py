@@ -7,6 +7,12 @@ from rooms import E1_R2
 from rooms import E2_R1
 from rooms import E2_R2
 from rooms import E2_R3
+from rooms import E3_R1
+from rooms import E3_R2
+from rooms import E3_R3
+from rooms import E4_R1
+from rooms import E4_R2
+from rooms import E4_R3
 
 escapes = {
     'E1': e.Escape('Escape Room Roma 1', 'Via Benadir 2, 00199 Roma', '3924359562 - 3333727927 - 3465820365',
@@ -107,8 +113,12 @@ rooms = {
     'E2': {'R1': E2_R1.E2_R1(),
            'R2': E2_R2.E2_R2(),
            'R3': E2_R3.E2_R3()},
-    'E3': {},
-    'E4': {},
+    'E3': {'R1': E3_R1.E3_R1(),
+           'R2': E3_R2.E3_R2(),
+           'R3': E3_R3.E3_R3()},
+    'E4': {'R1': E4_R1.E4_R1(),
+           'R2': E4_R2.E4_R2(),
+           'R3': E4_R3.E4_R3()},
     'E5': {},
     'E6': {},
     'E7': {},
