@@ -13,6 +13,109 @@ from rooms import E3_R3
 from rooms import E4_R1
 from rooms import E4_R2
 from rooms import E4_R3
+from rooms import E5_R1
+from rooms import E6_R1
+from rooms import E7_R1
+from rooms import E7_R2
+from rooms import E8_R1
+from rooms import E8_R2
+from rooms import E9_R1
+from rooms import E9_R2
+from rooms import E10_R1
+from rooms import E11_R1
+from rooms import E11_R2
+from rooms import E11_R3
+from rooms import E11_R4
+from rooms import E11_R5
+from rooms import E12_R1
+from rooms import E12_R2
+from rooms import E12_R3
+from rooms import E13_R1
+from rooms import E13_R2
+from rooms import E13_R3
+from rooms import E13_R4
+from rooms import E14_R1
+from rooms import E15_R1
+from rooms import E15_R2
+from rooms import E15_R3
+from rooms import E15_R4
+from rooms import E15_R5
+from rooms import E16_R1
+from rooms import E16_R2
+from rooms import E16_R3
+from rooms import E17_R1
+from rooms import E17_R2
+from rooms import E17_R3
+from rooms import E18_R1
+from rooms import E18_R2
+from rooms import E18_R3
+from rooms import E19_R1
+from rooms import E19_R2
+from rooms import E19_R3
+from rooms import E19_R4
+from rooms import E20_R1
+from rooms import E20_R2
+from rooms import E21_R1
+from rooms import E22_R1
+from rooms import E23_R1
+from rooms import E23_R2
+from rooms import E23_R3
+from rooms import E24_R1
+from rooms import E24_R2
+from rooms import E25_R1
+from rooms import E25_R2
+from rooms import E26_R1
+from rooms import E27_R1
+from rooms import E27_R2
+from rooms import E27_R3
+from rooms import E28_R1
+from rooms import E28_R2
+from rooms import E28_R3
+from rooms import E28_R4
+from rooms import E29_R1
+from rooms import E29_R2
+from rooms import E29_R3
+from rooms import E29_R4
+from rooms import E29_R5
+from rooms import E29_R6
+from rooms import E30_R1
+from rooms import E30_R2
+from rooms import E30_R3
+from rooms import E30_R4
+from rooms import E30_R5
+from rooms import E30_R6
+from rooms import E30_R7
+from rooms import E30_R8
+from rooms import E30_R9
+from rooms import E30_R10
+from rooms import E30_R11
+from rooms import E31_R1
+from rooms import E32_R1
+from rooms import E32_R2
+from rooms import E32_R3
+from rooms import E33_R1
+from rooms import E34_R1
+from rooms import E35_R1
+from rooms import E35_R2
+from rooms import E35_R3
+from rooms import E36_R1
+from rooms import E36_R2
+from rooms import E36_R3
+from rooms import E37_R1
+from rooms import E37_R2
+from rooms import E38_R1
+from rooms import E38_R2
+from rooms import E39_R1
+from rooms import E39_R2
+from rooms import E40_R1
+from rooms import E40_R2
+from rooms import E41_R1
+from rooms import E42_R1
+from rooms import E43_R1
+from rooms import E44_R1
+from rooms import E44_R2
+from rooms import E44_R3
+from rooms import E45_R1
 
 escapes = {
     'E1': e.Escape('Escape Room Roma 1', 'Via Benadir 2, 00199 Roma', '3924359562 - 3333727927 - 3465820365',
@@ -119,47 +222,109 @@ rooms = {
     'E4': {'R1': E4_R1.E4_R1(),
            'R2': E4_R2.E4_R2(),
            'R3': E4_R3.E4_R3()},
-    'E5': {},
-    'E6': {},
-    'E7': {},
-    'E8': {},
-    'E9': {},
-    'E10': {},
-    'E11': {},
-    'E12': {},
-    'E13': {},
-    'E14': {},
-    'E15': {},
-    'E16': {},
-    'E17': {},
-    'E18': {},
-    'E19': {},
-    'E20': {},
-    'E21': {},
-    'E22': {},
-    'E23': {},
-    'E24': {},
-    'E25': {},
-    'E26': {},
-    'E27': {},
-    'E28': {},
-    'E29': {},
-    'E30': {},
-    'E31': {},
-    'E32': {},
-    'E33': {},
-    'E34': {},
-    'E35': {},
-    'E36': {},
-    'E37': {},
-    'E38': {},
-    'E39': {},
-    'E40': {},
-    'E41': {},
-    'E42': {},
-    'E43': {},
-    'E44': {},
-    'E45': {}
+    'E5': {'R1': E5_R1.E5_R1()},
+    'E6': {'R1': E6_R1.E6_R1()},
+    'E7': {'R1': E7_R1.E7_R1(),
+           'R2': E7_R2.E7_R2()},
+    'E8': {'R1': E8_R1.E8_R1(),
+           'R2': E8_R2.E8_R2()},
+    'E9': {'R1': E9_R1.E9_R1(),
+           'R2': E9_R2.E9_R2()},
+    'E10': {'R1': E10_R1.E10_R1()},
+    'E11': {'R1': E11_R1.E11_R1(),
+            'R2': E11_R2.E11_R2(),
+            'R3': E11_R3.E11_R3(),
+            'R4': E11_R4.E11_R4(),
+            'R5': E11_R5.E11_R5()},
+    'E12': {'R1': E12_R1.E12_R1(),
+            'R2': E12_R2.E12_R2(),
+            'R3': E12_R3.E12_R3()},
+    'E13': {'R1': E13_R1.E13_R1(),
+            'R2': E13_R2.E13_R2(),
+            'R3': E13_R3.E13_R3(),
+            'R4': E13_R4.E13_R4()},
+    'E14': {'R1': E14_R1.E14_R1()},
+    'E15': {'R1': E15_R1.E15_R1(),
+            'R2': E15_R2.E15_R2(),
+            'R3': E15_R3.E15_R3(),
+            'R4': E15_R4.E15_R4(),
+            'R5': E15_R5.E15_R5()},
+    'E16': {'R1': E16_R1.E16_R1(),
+            'R2': E16_R2.E16_R2(),
+            'R3': E16_R3.E16_R3()},
+    'E17': {'R1': E17_R1.E17_R1(),
+            'R2': E17_R2.E17_R2(),
+            'R3': E17_R3.E17_R3()},
+    'E18': {'R1': E18_R1.E18_R1(),
+            'R2': E18_R2.E18_R2(),
+            'R3': E18_R3.E18_R3()},
+    'E19': {'R1': E19_R1.E19_R1(),
+            'R2': E19_R2.E19_R2(),
+            'R3': E19_R3.E19_R3(),
+            'R4': E19_R4.E19_R4()},
+    'E20': {'R1': E20_R1.E20_R1(),
+            'R2': E20_R2.E20_R2()},
+    'E21': {'R1': E21_R1.E21_R1()},
+    'E22': {'R1': E22_R1.E22_R1()},
+    'E23': {'R1': E23_R1.E23_R1(),
+            'R2': E23_R2.E23_R2(),
+            'R3': E23_R3.E23_R3()},
+    'E24': {'R1': E24_R1.E24_R1(),
+            'R2': E24_R2.E24_R2()},
+    'E25': {'R1': E25_R1.E25_R1(),
+            'R2': E25_R2.E25_R2()},
+    'E26': {'R1': E26_R1.E26_R1()},
+    'E27': {'R1': E27_R1.E27_R1(),
+            'R2': E27_R2.E27_R2(),
+            'R3': E27_R3.E27_R3()},
+    'E28': {'R1': E28_R1.E28_R1(),
+            'R2': E28_R2.E28_R2(),
+            'R3': E28_R3.E28_R3(),
+            'R4': E28_R4.E28_R4()},
+    'E29': {'R1': E29_R1.E29_R1(),
+            'R2': E29_R2.E29_R2(),
+            'R3': E29_R3.E29_R3(),
+            'R4': E29_R4.E29_R4(),
+            'R5': E29_R5.E29_R5(),
+            'R6': E29_R5.E29_R5()},
+    'E30': {'R1': E30_R1.E30_R1(),
+            'R2': E30_R2.E30_R2(),
+            'R3': E30_R3.E30_R3(),
+            'R4': E30_R4.E30_R4(),
+            'R5': E30_R5.E30_R5(),
+            'R6': E30_R6.E30_R6(),
+            'R7': E30_R7.E30_R7(),
+            'R8': E30_R8.E30_R8(),
+            'R9': E30_R9.E30_R9(),
+            'R10': E30_R10.E30_R10(),
+            'R11': E30_R11.E30_R11()},
+    'E31': {'R1': E31_R1.E31_R1()},
+    'E32': {'R1': E32_R1.E32_R1(),
+            'R2': E32_R2.E32_R2(),
+            'R3': E32_R3.E32_R3()},
+    'E33': {'R1': E33_R1.E33_R1()},
+    'E34': {'R1': E34_R1.E34_R1()},
+    'E35': {'R1': E35_R1.E35_R1(),
+            'R2': E35_R2.E35_R2(),
+            'R3': E35_R3.E35_R3()},
+    'E36': {'R1': E36_R1.E36_R1(),
+            'R2': E36_R2.E36_R2(),
+            'R3': E36_R3.E36_R3()},
+    'E37': {'R1': E37_R1.E37_R1(),
+            'R2': E37_R2.E37_R2()},
+    'E38': {'R1': E38_R1.E38_R1(),
+            'R2': E38_R2.E38_R2()},
+    'E39': {'R1': E39_R1.E39_R1(),
+            'R2': E39_R2.E39_R2()},
+    'E40': {'R1': E40_R1.E40_R1(),
+            'R2': E40_R2.E40_R2()},
+    'E41': {'R1': E41_R1.E41_R1()},
+    'E42': {'R1': E42_R1.E42_R1()},
+    'E43': {'R1': E43_R1.E43_R1()},
+    'E44': {'R1': E44_R1.E44_R1(),
+            'R2': E44_R2.E44_R2(),
+            'R3': E44_R3.E44_R3()},
+    'E45': {'R1': E45_R1.E45_R1()}
 }
 
 escapes_objs = []
