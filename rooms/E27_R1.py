@@ -5,7 +5,7 @@ import Constants as c
 class E27_R1(Room.Room):
 
     def __init__(self):
-        super().__init__('Indiana Jones e l\'oro di Roma', 'https://magicescape.it/indiana-jones-roma/', 'E27_R1')
+        super().__init__('Indiana Jones e l''oro di Roma', 'https://magicescape.it/indiana-jones-roma/', 'E27_R1')
 
     def get_prices(self):
         p = ['1 GIOCATORE – € 30,00',
