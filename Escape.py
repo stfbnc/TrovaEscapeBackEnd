@@ -11,6 +11,7 @@ class Escape:
                  website,
                  lat,
                  lon,
+                 tags,
                  code):
         self.name = name
         self.short_name = short_name
@@ -19,6 +20,7 @@ class Escape:
         self.website = website
         self.lat = lat
         self.lon = lon
+        self.tags = tags
         self.code = code
         self.rooms = []
 
@@ -33,6 +35,7 @@ class Escape:
                   C.ESCAPE_WEBSITE_TAG: self.website,
                   C.ESCAPE_LAT_TAG: self.lat,
                   C.ESCAPE_LON_TAG: self.lon,
+                  C.ESCAPE_TAGS_TAG: self.tags,
                   C.ESCAPE_CODE_TAG: self.code,
                   C.ROOMS_TAG: self.rooms}
         return escape
