@@ -5,7 +5,7 @@ import Constants as c
 class E36_R2(Room.Room):
 
     def __init__(self):
-        super().__init__('L''Inferno Dantesco', 'https://www.experienceescaperoom.it/inferno-dantesco/', 'E36_R2')
+        super().__init__('L\'Inferno Dantesco', 'https://www.experienceescaperoom.it/inferno-dantesco/', 'E36_R2')
 
     def get_prices(self):
         p = ['2 GIOCATORI – € 25,00 a persona',

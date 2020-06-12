@@ -1,3 +1,12 @@
+# links to JSON bin
+ESCAPE_BIN = "https://api.jsonbin.io/b/5ee3bb1c1f9e4e57881c6bbe"
+ESCAPE_BIN_LATEST = "https://api.jsonbin.io/b/5ee3bb1c1f9e4e57881c6bbe/latest"
+TIME_BIN = "https://api.jsonbin.io/b/5ee3e9651f9e4e57881c8189"
+TIME_BIN_LATEST = "https://api.jsonbin.io/b/5ee3e9651f9e4e57881c8189/latest"
+
+# JSON fields
+DB_TIME = 'TIME'
+
 ESCAPES_TAG = 'ESCAPES'
 
 ESCAPE_NAME_TAG = 'NAME'
@@ -18,8 +27,10 @@ ROOMS_PRICES_TAG = 'PRICES'
 ROOMS_AVAIL_TAG = 'AVAIL'
 ROOMS_CODE_TAG = 'CODE'
 
+# strings separator
 SEPARATOR = '%'
 
+# tags
 HORROR_TAG = "horror"
 ACTORS_TAG = "attori"
 ADVENTURE_TAG = "avventura"

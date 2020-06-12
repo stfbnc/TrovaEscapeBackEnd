@@ -5,7 +5,7 @@ import Constants as c
 class E16_R1(Room.Room):
 
     def __init__(self):
-        super().__init__('Casa Stregata - L''Esorcismo', 'https://www.fugacemente.it/timeadventures/room/esorcismo/', 'E16_R1')
+        super().__init__('Casa Stregata - L\'Esorcismo', 'https://www.fugacemente.it/timeadventures/room/esorcismo/', 'E16_R1')
 
     def get_prices(self):
         p = ['2 GIOCATORI – € 50,00',

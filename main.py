@@ -1,6 +1,9 @@
 import Escape as e
 import Room as r
 import Constants as c
+import requests
+import re
+from datetime import datetime
 
 from rooms import E1_R1
 from rooms import E1_R2
@@ -372,14 +375,44 @@ rooms = {
     'E45': {'R1': E45_R1.E45_R1()}
 }
 
-escapes_objs = []
-for k1 in escapes.keys():
-    v1 = escapes[k1]
-    e_r = []
-    for k2 in rooms[k1].keys():
-        e_r.append(rooms[k1][k2].get_room_object())
-    v1.set_rooms(e_r)
-    escapes_objs.append(v1.get_escape_object())
+
+def escapes_json():
+    escapes_objs = []
+    for k1 in escapes.keys():
+        v1 = escapes[k1]
+        e_r = []
+        for k2 in rooms[k1].keys():
+            e_r.append(rooms[k1][k2].get_room_object())
+        v1.set_rooms(e_r)
+        escapes_objs.append(v1.get_escape_object())
+
+    return escapes_objs
+
 
 if __name__ == '__main__':
-    print({c.ESCAPES_TAG: escapes_objs})
+    old_json = requests.get(c.ESCAPE_BIN_LATEST)
+    new_json = {c.ESCAPES_TAG: escapes_json()}
+
+    old_str = old_json.text.replace(" ", "").replace("\"", "\'")
+    new_str = str(new_json).replace(" ", "").replace("\"", "\'")
+    print('old string = ' + old_str)
+    print('new string = ' + new_str)
+
+    if new_str != old_str:
+        new_date = datetime.today().strftime('%Y%m%d%H%M%S')
+        print('New date: ' + new_date)
+
+        headers = {'Content-Type': 'application/json'}
+        req_date = requests.put(c.TIME_BIN, json={c.DB_TIME: new_date}, headers=headers)
+        regex_date = re.search('"success":([a-z]{4,5})', req_date.text, re.I)
+        if (regex_date is not None) and (regex_date.group(1) == "true"):
+            req = requests.put(c.ESCAPE_BIN, json=new_json, headers=headers)
+            regex = re.search('"success":([a-z]{4,5})', req.text, re.I)
+            if (regex is not None) and (regex.group(1) == "true"):
+                print('Updating data')
+                print(req.text)
+            else:
+                print('Failed to update data')
+                print(req.text)
+        else:
+            print('Faild to update time')

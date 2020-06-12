@@ -5,7 +5,7 @@ import Constants as c
 class E2_R3(Room.Room):
 
     def __init__(self):
-        super().__init__('L''Esorcista - Parte 2', 'https://www.escaperoomroma.it/esorcista-il-cimitero/', 'E2_R3')
+        super().__init__('L\'Esorcista - Parte 2', 'https://www.escaperoomroma.it/esorcista-il-cimitero/', 'E2_R3')
 
     def get_prices(self):
         p = ['FINO A 4 GIOCATORI – € 90,00 totali',
