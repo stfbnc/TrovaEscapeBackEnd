@@ -41,10 +41,9 @@ class E27_R3(Room.Room):
             all_time_elems = driver.find_elements_by_xpath('//*[@id="sb_time_slots_container"]/div')
 
             for elem in all_time_elems:
-                print(elem.find_element_by_tag_name('a').text)
                 avails.append(elem.find_element_by_tag_name('a').text)
         except:
-            print('Page timed out after {} secs'.format(wait_time))
+            print('E27_R3: Page timed out after {} secs'.format(wait_time))
 
         driver.quit()
 
