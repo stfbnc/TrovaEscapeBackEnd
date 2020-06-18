@@ -34,4 +34,6 @@ SEPARATOR = '%'
 HORROR_TAG = "horror"
 ACTORS_TAG = "attori"
 ADVENTURE_TAG = "avventura"
-MISTERY_TAG = "mistero"
+MISTERY_TAG = "thriller"
+ACTION_TAG = "azione"
+CAZZEGGIO_TAG = "cazzeggio"
