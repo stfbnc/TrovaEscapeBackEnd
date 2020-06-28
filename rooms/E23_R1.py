@@ -17,4 +17,4 @@ class E23_R1(Room.Room):
         return c.SEPARATOR.join(p)
 
     def get_availabilities(self):
-        return ""
+        return c.NO_RETR_AVAILS

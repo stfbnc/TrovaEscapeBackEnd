@@ -8,7 +8,7 @@ class E21_R1(Room.Room):
         super().__init__('Pablo Escobar', 'https://www.fugacemente.it/roma-trastevere/escape-room/pablo-escobar/', 'E21_R1')
 
     def get_prices(self):
-        return ''
+        return c.NO_RETR_PRICES
 
     def get_availabilities(self):
         return ""

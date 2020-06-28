@@ -30,6 +30,10 @@ ROOMS_CODE_TAG = 'CODE'
 # strings separator
 SEPARATOR = '%'
 
+# no retrievable data
+NO_RETR_AVAILS = 'no_retrievable_hours'
+NO_RETR_PRICES = 'no_retrievable_prices'
+
 # tags
 HORROR_TAG = "horror"
 ACTORS_TAG = "attori"

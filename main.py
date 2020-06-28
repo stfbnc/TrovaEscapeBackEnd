@@ -13,9 +13,9 @@ from rooms import E2_R3
 from rooms import E3_R1
 from rooms import E3_R2
 from rooms import E3_R3
-from rooms import E4_R1
-from rooms import E4_R2
-from rooms import E4_R3
+#from rooms import E4_R1
+#from rooms import E4_R2
+#from rooms import E4_R3
 from rooms import E5_R1
 from rooms import E6_R1
 from rooms import E7_R1
@@ -101,20 +101,20 @@ from rooms import E34_R1
 from rooms import E35_R1
 from rooms import E35_R2
 from rooms import E35_R3
-from rooms import E36_R1
-from rooms import E36_R2
-from rooms import E36_R3
-from rooms import E37_R1
-from rooms import E37_R2
-from rooms import E38_R1
-from rooms import E38_R2
-from rooms import E39_R1
-from rooms import E39_R2
+#from rooms import E36_R1
+#from rooms import E36_R2
+#from rooms import E36_R3
+#from rooms import E37_R1
+#from rooms import E37_R2
+#from rooms import E38_R1
+#from rooms import E38_R2
+#from rooms import E39_R1
+#from rooms import E39_R2
 from rooms import E40_R1
 from rooms import E40_R2
 from rooms import E41_R1
 from rooms import E42_R1
-from rooms import E43_R1
+#from rooms import E43_R1
 from rooms import E44_R1
 from rooms import E44_R2
 from rooms import E44_R3
@@ -130,9 +130,6 @@ escapes = {
     'E3': e.Escape('Magic Escape 1', 'Magic', 'Via Bolzano 40, 00198 Roma', '3701141293 - 3489266475',
                    'https://magicescape.it/', 41.9214719, 12.5136879,
                    c.SEPARATOR.join([c.MISTERY_TAG, c.ADVENTURE_TAG]), 'E3'),
-    'E4': e.Escape('Time Alive', 'Time Alive', 'Via Monte Nero 45, 00012 Guidonia', '3515413111 - 3346066844',
-                   'https://www.time-alive.it/roma-2/', 41.9766136, 12.6153138,
-                   c.SEPARATOR.join([c.MISTERY_TAG, c.HORROR_TAG]), 'E4'),
     'E5': e.Escape('Cogito Ergo Room', 'Cogito', 'Via Tiburtina 862, 00159 Roma', '0639727190 - 3668743988',
                    'https://cogitoergoroom.it/', 41.9181771, 12.5622175,
                    c.SEPARATOR.join([c.HORROR_TAG]), 'E5'),
@@ -226,30 +223,15 @@ escapes = {
     'E35': e.Escape('Escape Campo dei Fiori', 'Campo dei Fiori', 'Vicolo delle Grotte 3, 00186 Roma', '3347261615',
                     'http://www.escapecampodeifiori.com/', 41.8948172, 12.4704218,
                     c.SEPARATOR.join([c.ACTION_TAG, c.ADVENTURE_TAG]), 'E35'),
-    'E36': e.Escape('Experience Escape Room', 'Experience', 'Via dei Legatori 68/70, 00128 Roma', '3515115574',
-                    'https://www.experienceescaperoom.it/', 41.7621569, 12.4635911,
-                    c.SEPARATOR.join([c.MISTERY_TAG, c.CAZZEGGIO_TAG]), 'E36'),
-    'E37': e.Escape('Fugacemente Castel Gandolfo', 'Fugacemente', 'Via Michelangelo 1A, 00040 Castel Gandolfo', '3488442664 - 3463144420 - 3279054605',
-                    'https://www.fugacemente.it/castelgandolfo/', 41.7275955, 12.614457,
-                    c.SEPARATOR.join([c.HORROR_TAG, c.MISTERY_TAG]), 'E37'),
-    'E38': e.Escape('Mentalmente', 'Mentalmente', 'Via Giuseppe Lunati 16, 00044 Frascati', '3473048770',
-                    'http://www.mentalmenteescaperoom.it/', 41.8068178, 12.6785357,
-                    c.SEPARATOR.join([c.ADVENTURE_TAG, c.MISTERY_TAG]), 'E38'),
-    'E39': e.Escape('Fugacity', 'Fugacity', 'Via Maremmana 15, 00030 San Cesareo', '3334568360 - 3397592091',
-                    'http://www.fugacity.it/', 41.8200539, 12.775461,
-                    c.SEPARATOR.join([c.HORROR_TAG]), 'E39'),
     'E40': e.Escape('Lucifer', 'Lucifer', 'Via Appia Pignatelli 235, 00178 Roma', '',
                     'http://www.luciferescaperoom.it/', 41.8431565, 12.5392839,
                     c.SEPARATOR.join([c.ACTORS_TAG, c.HORROR_TAG]), 'E40'),
     'E41': e.Escape('Joker Escape Room', 'Joker', 'Via Antonio Coppi 4C, 00179 Roma', '3342117822',
-                    '', 41.8702714, 12.5136102,
+                    'http://www.jokerescaperoom.com/', 41.8702714, 12.5136102,
                     c.SEPARATOR.join([c.ACTION_TAG]), 'E41'),
     'E42': e.Escape('La Casa Del Male', 'Casa Del Male', 'Via Appia Nuova 1305, 00178 Roma', '3518609064',
                     'https://www.lacasadelmale.it/', 41.8114527, 12.5719115,
                     c.SEPARATOR.join([c.HORROR_TAG]), 'E42'),
-    'E43': e.Escape('Escape Room Ostia Roma', 'Ostia', 'Via Mar Rosso 335, 00122 Ostia', '3398018862',
-                    '', 41.7314163, 12.3024346,
-                    c.SEPARATOR.join([c.ADVENTURE_TAG, c.HORROR_TAG, c.MISTERY_TAG]), 'E43'),
     'E44': e.Escape('Escape Oddity', 'Oddity', 'Via Cristoforo Colombo 454A, 00145 Roma', '',
                     'https://www.escapeoddity.com/', 41.8507784, 12.4824413,
                     c.SEPARATOR.join([c.HORROR_TAG, c.ADVENTURE_TAG]), 'E44'),
@@ -257,6 +239,30 @@ escapes = {
                     '', 41.8656777, 12.4965895,
                     c.SEPARATOR.join([c.HORROR_TAG]), 'E45')
 }
+
+#'E4': e.Escape('Time Alive', 'Time Alive', 'Via Monte Nero 45, 00012 Guidonia', '3515413111 - 3346066844',
+#               'https://www.time-alive.it/roma-2/', 41.9766136, 12.6153138,
+#               c.SEPARATOR.join([c.MISTERY_TAG, c.HORROR_TAG]), 'E4'),
+
+#'E36': e.Escape('Experience Escape Room', 'Experience', 'Via dei Legatori 68/70, 00128 Roma', '3515115574',
+#                 'https://www.experienceescaperoom.it/', 41.7621569, 12.4635911,
+#                  c.SEPARATOR.join([c.MISTERY_TAG, c.CAZZEGGIO_TAG]), 'E36'),
+
+#'E37': e.Escape('Fugacemente Castel Gandolfo', 'Fugacemente', 'Via Michelangelo 1A, 00040 Castel Gandolfo', '3488442664 - 3463144420 - 3279054605',
+#                'https://www.fugacemente.it/castelgandolfo/', 41.7275955, 12.614457,
+#                c.SEPARATOR.join([c.HORROR_TAG, c.MISTERY_TAG]), 'E37'),
+
+#'E38': e.Escape('Mentalmente', 'Mentalmente', 'Via Giuseppe Lunati 16, 00044 Frascati', '3473048770',
+#                'http://www.mentalmenteescaperoom.it/', 41.8068178, 12.6785357,
+#                c.SEPARATOR.join([c.ADVENTURE_TAG, c.MISTERY_TAG]), 'E38'),
+
+#'E39': e.Escape('Fugacity', 'Fugacity', 'Via Maremmana 15, 00030 San Cesareo', '3334568360 - 3397592091',
+#                'http://www.fugacity.it/', 41.8200539, 12.775461,
+#                c.SEPARATOR.join([c.HORROR_TAG]), 'E39'),
+
+#'E43': e.Escape('Escape Room Ostia Roma', 'Ostia', 'Via Mar Rosso 335, 00122 Ostia', '3398018862',
+#                '', 41.7314163, 12.3024346,
+#                c.SEPARATOR.join([c.ADVENTURE_TAG, c.HORROR_TAG, c.MISTERY_TAG]), 'E43'),
 
 rooms = {
     'E1': {'R1': E1_R1.E1_R1(),
@@ -267,9 +273,6 @@ rooms = {
     'E3': {'R1': E3_R1.E3_R1(),
            'R2': E3_R2.E3_R2(),
            'R3': E3_R3.E3_R3()},
-    'E4': {'R1': E4_R1.E4_R1(),
-           'R2': E4_R2.E4_R2(),
-           'R3': E4_R3.E4_R3()},
     'E5': {'R1': E5_R1.E5_R1()},
     'E6': {'R1': E6_R1.E6_R1()},
     'E7': {'R1': E7_R1.E7_R1(),
@@ -355,25 +358,34 @@ rooms = {
     'E35': {'R1': E35_R1.E35_R1(),
             'R2': E35_R2.E35_R2(),
             'R3': E35_R3.E35_R3()},
-    'E36': {'R1': E36_R1.E36_R1(),
-            'R2': E36_R2.E36_R2(),
-            'R3': E36_R3.E36_R3()},
-    'E37': {'R1': E37_R1.E37_R1(),
-            'R2': E37_R2.E37_R2()},
-    'E38': {'R1': E38_R1.E38_R1(),
-            'R2': E38_R2.E38_R2()},
-    'E39': {'R1': E39_R1.E39_R1(),
-            'R2': E39_R2.E39_R2()},
     'E40': {'R1': E40_R1.E40_R1(),
             'R2': E40_R2.E40_R2()},
     'E41': {'R1': E41_R1.E41_R1()},
     'E42': {'R1': E42_R1.E42_R1()},
-    'E43': {'R1': E43_R1.E43_R1()},
     'E44': {'R1': E44_R1.E44_R1(),
             'R2': E44_R2.E44_R2(),
             'R3': E44_R3.E44_R3()},
     'E45': {'R1': E45_R1.E45_R1()}
 }
+
+#'E4': {'R1': E4_R1.E4_R1(),
+#       'R2': E4_R2.E4_R2(),
+#       'R3': E4_R3.E4_R3()},
+
+#'E36': {'R1': E36_R1.E36_R1(),
+#        'R2': E36_R2.E36_R2(),
+#        'R3': E36_R3.E36_R3()},
+
+#'E37': {'R1': E37_R1.E37_R1(),
+#        'R2': E37_R2.E37_R2()},
+
+#'E38': {'R1': E38_R1.E38_R1(),
+#        'R2': E38_R2.E38_R2()},
+
+#'E39': {'R1': E39_R1.E39_R1(),
+#        'R2': E39_R2.E39_R2()},
+
+#'E43': {'R1': E43_R1.E43_R1()},
 
 
 def escapes_json():

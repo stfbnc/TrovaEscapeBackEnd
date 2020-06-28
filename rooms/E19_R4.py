@@ -8,7 +8,7 @@ class E19_R4(Room.Room):
         super().__init__('Paese delle Meraviglie', 'https://www.fugacemente.it/roma-tor-vergata/escape-room/paese-delle-meraviglie/', 'E19_R4')
 
     def get_prices(self):
-        return ''
+        return c.NO_RETR_PRICES
 
     def get_availabilities(self):
         return ""

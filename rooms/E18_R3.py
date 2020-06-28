@@ -8,7 +8,7 @@ class E18_R3(Room.Room):
         super().__init__('Stranger Room', 'https://www.fugacemente.it/roma-colle-prenestino/escape-room/stranger-room/', 'E18_R3')
 
     def get_prices(self):
-        return ''
+        return c.NO_RETR_PRICES
 
     def get_availabilities(self):
         return ""

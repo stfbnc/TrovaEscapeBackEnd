@@ -8,7 +8,7 @@ class E18_R1(Room.Room):
         super().__init__('Accademia delle Streghe', 'https://www.fugacemente.it/roma-colle-prenestino/escape-room/accademia-delle-streghe/', 'E18_R1')
 
     def get_prices(self):
-        return ''
+        return c.NO_RETR_PRICES
 
     def get_availabilities(self):
         return ""

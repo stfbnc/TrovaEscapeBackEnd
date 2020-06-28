@@ -1,5 +1,10 @@
 import Room
 import Constants as c
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.expected_conditions import presence_of_element_located
+from selenium.webdriver.firefox.options import Options
 
 
 class E13_R2(Room.Room):
@@ -16,4 +21,34 @@ class E13_R2(Room.Room):
         return c.SEPARATOR.join(p)
 
     def get_availabilities(self):
-        return ""
+        wait_time = 10
+        options = Options()
+        options.headless = True
+        driver = webdriver.Firefox(options=options)
+        driver.get(self.website)
+        avails = []
+
+        print(self.code)
+
+        try:
+            wait = WebDriverWait(driver, wait_time)
+
+            wait.until(presence_of_element_located((By.XPATH, '//*[@class="app_timetable_wrapper"]//div')))
+            all_time_elems = driver.find_elements_by_xpath('//*[@class="app_timetable_wrapper"]//div')
+
+            title = 0
+            for elem in all_time_elems:
+                if elem.get_attribute('class') == 'app_timetable_title':
+                    title += 1
+                if 'free' in elem.get_attribute('class').split():
+                    avails.append(elem.text)
+                if title == 2:
+                    break
+        except:
+            print('Page timed out after {} secs'.format(wait_time))
+
+        driver.quit()
+
+        print(avails)
+
+        return c.SEPARATOR.join(avails)

@@ -8,7 +8,7 @@ class E17_R2(Room.Room):
         super().__init__('Galeone Pirata', 'https://www.fugacemente.it/roma-anagnina/escape-room/galeone-pirata/', 'E17_R2')
 
     def get_prices(self):
-        return ''
+        return c.NO_RETR_PRICES
 
     def get_availabilities(self):
         return ""
