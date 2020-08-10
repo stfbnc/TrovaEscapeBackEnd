@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
-from selenium.webdriver.firefox.options import Options
+#from selenium.webdriver.firefox.options import Options
 
 
 class E3_R1(Room.Room):
@@ -27,9 +27,9 @@ class E3_R1(Room.Room):
 
     def get_availabilities(self):
         wait_time = 10
-        options = Options()
-        options.headless = True
-        driver = webdriver.Firefox(options=options)
+        # options = Options()
+        # options.headless = True
+        driver = webdriver.Firefox()  # options=options)
         driver.get(self.website)
         avails = []
 
