@@ -46,6 +46,4 @@ class E2_R1(Room.Room):
 
         driver.quit()
 
-        print(avails)
-
         return c.SEPARATOR.join(avails)

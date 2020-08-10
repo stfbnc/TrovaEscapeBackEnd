@@ -1,9 +1,10 @@
 import Escape as e
-import Room as r
 import Constants as c
 import requests
 import re
 from datetime import datetime
+from multiprocessing import Pool
+from multiprocessing import cpu_count
 
 from rooms import E1_R1
 from rooms import E1_R2
@@ -13,9 +14,6 @@ from rooms import E2_R3
 from rooms import E3_R1
 from rooms import E3_R2
 from rooms import E3_R3
-#from rooms import E4_R1
-#from rooms import E4_R2
-#from rooms import E4_R3
 from rooms import E5_R1
 from rooms import E6_R1
 from rooms import E7_R1
@@ -101,20 +99,10 @@ from rooms import E34_R1
 from rooms import E35_R1
 from rooms import E35_R2
 from rooms import E35_R3
-#from rooms import E36_R1
-#from rooms import E36_R2
-#from rooms import E36_R3
-#from rooms import E37_R1
-#from rooms import E37_R2
-#from rooms import E38_R1
-#from rooms import E38_R2
-#from rooms import E39_R1
-#from rooms import E39_R2
 from rooms import E40_R1
 from rooms import E40_R2
 from rooms import E41_R1
 from rooms import E42_R1
-#from rooms import E43_R1
 from rooms import E44_R1
 from rooms import E44_R2
 from rooms import E44_R3
@@ -240,29 +228,6 @@ escapes = {
                     c.SEPARATOR.join([c.HORROR_TAG]), 'E45')
 }
 
-#'E4': e.Escape('Time Alive', 'Time Alive', 'Via Monte Nero 45, 00012 Guidonia', '3515413111 - 3346066844',
-#               'https://www.time-alive.it/roma-2/', 41.9766136, 12.6153138,
-#               c.SEPARATOR.join([c.MISTERY_TAG, c.HORROR_TAG]), 'E4'),
-
-#'E36': e.Escape('Experience Escape Room', 'Experience', 'Via dei Legatori 68/70, 00128 Roma', '3515115574',
-#                 'https://www.experienceescaperoom.it/', 41.7621569, 12.4635911,
-#                  c.SEPARATOR.join([c.MISTERY_TAG, c.CAZZEGGIO_TAG]), 'E36'),
-
-#'E37': e.Escape('Fugacemente Castel Gandolfo', 'Fugacemente', 'Via Michelangelo 1A, 00040 Castel Gandolfo', '3488442664 - 3463144420 - 3279054605',
-#                'https://www.fugacemente.it/castelgandolfo/', 41.7275955, 12.614457,
-#                c.SEPARATOR.join([c.HORROR_TAG, c.MISTERY_TAG]), 'E37'),
-
-#'E38': e.Escape('Mentalmente', 'Mentalmente', 'Via Giuseppe Lunati 16, 00044 Frascati', '3473048770',
-#                'http://www.mentalmenteescaperoom.it/', 41.8068178, 12.6785357,
-#                c.SEPARATOR.join([c.ADVENTURE_TAG, c.MISTERY_TAG]), 'E38'),
-
-#'E39': e.Escape('Fugacity', 'Fugacity', 'Via Maremmana 15, 00030 San Cesareo', '3334568360 - 3397592091',
-#                'http://www.fugacity.it/', 41.8200539, 12.775461,
-#                c.SEPARATOR.join([c.HORROR_TAG]), 'E39'),
-
-#'E43': e.Escape('Escape Room Ostia Roma', 'Ostia', 'Via Mar Rosso 335, 00122 Ostia', '3398018862',
-#                '', 41.7314163, 12.3024346,
-#                c.SEPARATOR.join([c.ADVENTURE_TAG, c.HORROR_TAG, c.MISTERY_TAG]), 'E43'),
 
 rooms = {
     'E1': {'R1': E1_R1.E1_R1(),
@@ -368,42 +333,23 @@ rooms = {
     'E45': {'R1': E45_R1.E45_R1()}
 }
 
-#'E4': {'R1': E4_R1.E4_R1(),
-#       'R2': E4_R2.E4_R2(),
-#       'R3': E4_R3.E4_R3()},
 
-#'E36': {'R1': E36_R1.E36_R1(),
-#        'R2': E36_R2.E36_R2(),
-#        'R3': E36_R3.E36_R3()},
+def escape_json(k1):
+    v1 = escapes[k1]
+    e_r = []
+    for k2 in rooms[k1].keys():
+        e_r.append(rooms[k1][k2].get_room_object())
+    v1.set_rooms(e_r)
 
-#'E37': {'R1': E37_R1.E37_R1(),
-#        'R2': E37_R2.E37_R2()},
-
-#'E38': {'R1': E38_R1.E38_R1(),
-#        'R2': E38_R2.E38_R2()},
-
-#'E39': {'R1': E39_R1.E39_R1(),
-#        'R2': E39_R2.E39_R2()},
-
-#'E43': {'R1': E43_R1.E43_R1()},
-
-
-def escapes_json():
-    escapes_objs = []
-    for k1 in escapes.keys():
-        v1 = escapes[k1]
-        e_r = []
-        for k2 in rooms[k1].keys():
-            e_r.append(rooms[k1][k2].get_room_object())
-        v1.set_rooms(e_r)
-        escapes_objs.append(v1.get_escape_object())
-
-    return escapes_objs
+    return v1.get_escape_object()
 
 
 if __name__ == '__main__':
     old_json = requests.get(c.ESCAPE_BIN_LATEST)
-    new_json = {c.ESCAPES_TAG: escapes_json()}
+
+    pool = Pool(cpu_count())
+    fast_escapes = pool.map(escape_json, list(escapes.keys()))
+    new_json = {c.ESCAPES_TAG: fast_escapes}
 
     old_str = old_json.text.replace(" ", "").replace("\"", "\'")
     new_str = str(new_json).replace(" ", "").replace("\"", "\'")
@@ -421,7 +367,7 @@ if __name__ == '__main__':
             req = requests.put(c.ESCAPE_BIN, json=new_json, headers=headers)
             regex = re.search('"success":([a-z]{4,5})', req.text, re.I)
             if (regex is not None) and (regex.group(1) == "true"):
-                print('Updating data')
+                print('Data updated')
                 print(req.text)
             else:
                 print('Failed to update data')
