@@ -11,4 +11,4 @@ class E40_R1(Room.Room):
         return c.NO_RETR_PRICES
 
     def get_availabilities(self):
-        return ""
+        return c.NO_RETR_AVAILS

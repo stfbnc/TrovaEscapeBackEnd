@@ -31,6 +31,8 @@ class E27_R1(Room.Room):
         driver.get(self.website)
         avails = []
 
+        print(self.code)
+
         try:
             wait = WebDriverWait(driver, wait_time)
             iframe_element = wait.until(presence_of_element_located((By.XPATH, '//*[@id="prenota"]//iframe')))
@@ -42,7 +44,7 @@ class E27_R1(Room.Room):
             for elem in all_time_elems:
                 avails.append(elem.find_element_by_tag_name('a').text)
         except:
-            print('E27_R1: Page timed out after {} secs'.format(wait_time))
+            print('Page timed out after {} secs'.format(wait_time))
 
         driver.quit()
 
